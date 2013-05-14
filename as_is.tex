@@ -66,71 +66,7 @@ The customer is able to send an e-mail to get support from J.D.H. Insurance's su
 \subsection{The As-Is MAP Model}
 \label{sec:as_is_map_model}
 In this section we depict the different business processes translated to MAP based on the ArchiMate models presented earlier in the report. The following figures (\ref{fig:map_order}-\ref{fig:map_pay}) maps directly to views in the MAP model, thus, the figure depicted in the beginning of the report is all the view merged together. All views can be viewed in the attached iEaat file.
-\subsubsection{Order Process MAP Architecture}
-\label{sec:order_map}
-\begin{center}
-	\begin{figure}[H]
-		\centering
-		\setlength\fboxsep{7pt}
-		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.05]{images/map_order.png}}
-		\caption{Order process (\emph{MAP})}
-		\label{fig:map_order}
-	\end{figure}
-\end{center}
-%
-\subsubsection{Claim Process MAP Architecture}
-\label{sec:claim_map}
-\begin{center}
-	\begin{figure}[H]
-		\centering
-		\setlength\fboxsep{7pt}
-		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.05]{images/map_claim.png}}
-		\caption{Claim process (\emph{MAP})}
-		\label{fig:map_claim}
-	\end{figure}
-\end{center}
-%
-\subsubsection{E-Mail Support Process MAP Architecture}
-\label{sec:mail_map}
-\begin{center}
-	\begin{figure}[H]
-		\centering
-		\setlength\fboxsep{7pt}
-		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.05]{images/map_mail.png}}
-		\caption{Mail process (\emph{MAP})}
-		\label{fig:map_mail}
-	\end{figure}
-\end{center}
-%
-\subsubsection{Phone Support Process MAP Architecture}
-\label{sec:phone_map}
-\begin{center}
-	\begin{figure}[H]
-		\centering
-		\setlength\fboxsep{7pt}
-		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.05]{images/map_phone.png}}
-		\caption{Phone process (\emph{MAP})}
-		\label{fig:map_phone}
-	\end{figure}
-\end{center}
-%
-\subsubsection{Payment Process MAP Architecture}
-\label{sec:phone_map}
-\begin{center}
-	\begin{figure}[H]
-		\centering
-		\setlength\fboxsep{7pt}
-		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.05]{images/map_pay.png}}
-		\caption{Payment process (\emph{MAP})}
-		\label{fig:map_pay}
-	\end{figure}
-\end{center}
-%
+
 \subsection{MAP Analysis}
 \label{sec:map_analysis}
 This section contains analysis of segments of the As-Is MAP model, with respect to MAP attributes, where potential change could be made to reach the vision of the company.
@@ -150,6 +86,7 @@ The claim registration service which J.D.H. Insurance provide to the customers t
 The claim application is sent by the insurant to the company and the input accuracy of the application can be assumed to be very high, 0.99. The application is processed by the claim administrator in the claim registration process and the translation from the paper application to the digital description tend to create loss of information, the input accuracy of this is 0.80. The evaluator then reads this description and extends it with an answer, this extension has an input accuracy of 0.95.\\\\
 %
 This results in a total accuracy loss of 0.81 which seems like a low value for a company evaluating information provided by their customers and which aim to provide the best insurances.
+\input{tables/claim_as_is}
 %
 \subsubsection{Support - Service Availability}
 \label{sec:support_analysis}
@@ -178,6 +115,7 @@ The result of the analysis of these values gives an availability of 0.91 for the
 	\end{figure}
 \end{center}
 TODO text and tables\\\\
+\input{tables/support_as_is}
 %
 \subsubsection{Order Registration and Sending Reports - Cost}
 \label{sec:order_analysis}
@@ -210,6 +148,7 @@ In order to achieve maximum customer satisfaction the availability of the order 
 	\end{figure}
 \end{center}
 Next we present the current values for some entities primarily considered when assessing the availability. The first two tables (Nodes \& Application components) are evidential values, meaning, that these are values already set and not computed with through the EAAT tool. Whereas the availability in table the last table are derived values by EAAT.
+\input{tables/order_as_is}
 %
 \subsection{Improvements}
 \label{sec:improvements}
