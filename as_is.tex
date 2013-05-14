@@ -65,7 +65,6 @@ The customer is able to send an e-mail to get support from J.D.H. Insurance's su
 %
 \subsection{The As-Is MAP Model}
 \label{sec:as_is_map_model}
-TODO CHANGE TEXT\\\\
 In this section we depict the different business processes translated to MAP based on the ArchiMate models presented earlier in the report. The following figures (\ref{fig:map_business_as_is}-\ref{fig:map_information_as_is}) maps directly to views in the MAP model, thus, the figure depicted in the beginning of the report is all the view merged together. All views can be viewed in the attached iEaat file.
 %
 \subsubsection{Business Architecture}
@@ -118,7 +117,7 @@ In this section we depict the different business processes translated to MAP bas
 \subsection{MAP Analysis}
 \label{sec:map_analysis}
 This section contains analysis of segments of the As-Is MAP model, with respect to MAP attributes, where potential change could be made to reach the vision of the company.
-\subsubsection{Claim Registration - Data accuracy}
+\subsubsection{Claim Registration - Data Accuracy}
 \label{sec:claim_analysis}
 The claim registration service which J.D.H. Insurance provide to the customers they insure has a critical point where it is important that the accuracy of the claims application maintain, that is when the claim administrator receives the claim application from an insurant and registers it into the claim management system. For J.D.H. Insurance to ensure that no information is lost in this process it is vital to analyze the data accuracy of it to see if it can be improved by a new architecture providing higher accuracy. The analyze is done by using the following view, displayed in \fref{fig:map_claim_data}.
 \begin{center}
@@ -131,7 +130,6 @@ The claim registration service which J.D.H. Insurance provide to the customers t
 		\label{fig:map_claim_data}
 	\end{figure}
 \end{center}
-TODO UPDATE VALUES\\\\\
 The claim application is sent by the insurant to the company and the input accuracy of the application can be assumed to be very high, 0.99. The application is processed by the claim administrator in the claim registration process and the translation from the paper application to the digital description tend to create loss of information, the input accuracy of this is 0.80. The evaluator then reads this description and extends it with an answer, this extension has an input accuracy of 0.95.\\\\
 %
 This results in a total accuracy loss of 0.81 which seems like a low value for a company evaluating information provided by their customers and which aim to provide the best insurances.
@@ -185,7 +183,6 @@ The manager is a yearly cost for the company of 500' SEK, that includes salary a
 %
 The analysis resulted in a cost for the "Order receivement" process of 1525' SEK and a cost for the "Send Order Acceptance" process of 1837500 SEK.
 %
-\\\\UPDATE TEXT ROLE ETC
 \input{tables/order_cost_as_is}
 %
 \subsubsection{Order Registration - Availability}
@@ -206,10 +203,10 @@ Next we present the current values for some entities primarily considered when a
 %
 \subsection{Improvements}
 \label{sec:improvements}
-One could see improvements to the systems from the three analysis in the previous section. An improvement possible to increase the data accuracy in the analysis of the Claim registration is to create support on the website for claim registration, instead of having the customers to send an application to the company. This will then be represented the correct way directly from the system and the decrease of accuracy in the claim administrators work could be eliminated.\\\\
-%
-An improvement to the availability of the support services could be an aggregation of the two support services into one support service. An integrated more modern support system would be easier to maintain and the availability of the system would thereby increase.\\\\
-%
-An improvement to the cost of the order processing could also be to integrate the order processes into an automated system on the website, which then could eliminate the costs of the manager and as J.D.H. Insurance already has an web site, the costs for implementing it would not be very high and the cost for maintenance of that new functionality of the website would not be high since the website already is maintained. Hence, it would lower the costs.\\\\
-%
-Furthermore, the as-is model of the company illustrates the different collaboration between systems. For example, the CMS is currently interconnected with three other systems. CMS is and will be an important function in the enterprise and the results of improving it may be of great proportions if we find it deficient. If so, one key aspect we need to take into account when suggesting such a change is to study the application modifiability of the CMS. This will help us analyze the effects as well as the costs it may imply. Naturally, studying the modifiability will apply to every system, not just to the CMS.
+J.D.H Insurance could apply many changes to their main processes to align with the goals of this report. This section presents improvements for certain attributes in the MAP metamodel to certain processes and services.
+\subsubsection{Order Process (Cost/Availability)}
+The order process uses many different systems for fulfilling its purpose, along with an employee working for registering these orders and sending letter back to the customers about their order. These systems and the employees are quite costly and as the process is very important to J.D.H Insurance and a process which will remain in the company a reduction of these costs are motivated.
+\subsubsection{Claim Process (Accuracy)}
+As the claim process suffers of low accuracy in the processing of a claim application, a clear improvement for reaching the vision of being a leading company is to increase the accuracy of this process. As mentioned in the goals of this report, it would support the decision making of compensating the customer for her claim or not, which has an interest for both J.D.H. Insurance and their customers.
+\subsubsection{Support Services (Availability)}
+The support services are important services for the customers and its availability is an important factor in the customers satisfaction of being a customer in J.D.H Insurance. An increase of the availability of the mail support and the phone support would increase the customers satisfaction which in turn could impact the new customer stream to the company and thereby revenue.
