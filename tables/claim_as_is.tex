@@ -1,21 +1,28 @@
 \begin{center}
 \begin{table}[H]
-\begin{tabular}{|c|c|p{2cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\begin{tabular}{c|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.7cm}|}
 
 %\textbf{Attribute}& \textbf{State} & \textsl{Claim Application} & \textsl{Claim Description} & \textsl{Claim Description with result} & \textsl{Notification letter} \\
 
-\cline{3-6}
-\multicolumn{2}{c}{} & \multicolumn{4}{|c|}{\textbf{Nodes}} \\ \cline{3-6}
-\multicolumn{2}{c|}{} & \textsl{Claim Application} & \textsl{Claim Description} & \textsl{Claim Description with Result} & \textsl{Notification Letter}\\
+\cline{2-7}
+	 & \multicolumn{6}{c|}{\textbf{Representation Sets (RS) and Data Sets (DS)}} \\ \cline{2-7}
+	 & \textsl{Claim Application (RS)} & \textsl{Claim Description (RS)} & \textsl{Claim Description (DS)} & \textsl{Claim Description with Result (RS)} & \textsl{Claim Description with Result (DS)} & \textsl{Notification Letter (RS)}\\
 \hline
-Input Accuracy & \multirow{2}{*}{As-Is} & \multicolumn{1}{c|}{0.99} & \multicolumn{1}{c|}{0.98} & \multicolumn{1}{c|}{0.99} & \multicolumn{1}{c|}{0.99}\\ \cline{1-1} \cline{3-6}
+\multicolumn{1}{|c|}{\textbf{Input Accuracy}} & 0.99 & 0.98 & 0.99 & 0.99 & 0.99 & 0.99\\ \hline
+\multicolumn{1}{|c|}{\textbf{Accuracy}} & 0.99 & 0.89 & 0.88 & 0.85 & 0.85 & 0.84\\ \hline
 
-Accuracy	&	 & \multicolumn{1}{c|}{0.99} & \multicolumn{1}{c|}{0.84} & \multicolumn{1}{c|}{0.80} & \multicolumn{1}{c|}{0.79}\\ \hline
+	\multicolumn{7}{c}{} \\ \cline{2-7}
+	& \multicolumn{6}{c|}{\textbf{Application Services}} \\ \cline{2-7}
+	& \multicolumn{2}{c|}{\textsl{Register Claim Service}} & \textsl{Fetch Claim Description} & \textsl{Claim Result Service} & \multicolumn{2}{c|}{\textsl{Print Letter Service}} \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Deterioration}} & \multicolumn{2}{c|}{0.01} & 0.01 & 0.01 & \multicolumn{2}{c|}{0.01} \\ \hline
 
-\multicolumn{6}{c}{} \\ \cline{3-6}
-\multicolumn{2}{c}{} & \multicolumn{4}{|c|}{\textbf{Business process}} \\ \cline{3-6}
-\multicolumn{2}{c|}{} & \multicolumn{4}{|c|}{\textsl{Claim Registration}} \\ \hline
-Deterioration & As-Is & \multicolumn{4}{|c|}{0.15}\\ \hline
+	\multicolumn{7}{c}{} \\ \cline{2-7}
+	& \multicolumn{6}{c|}{\textbf{Business Processes}} \\ \cline{2-7}
+	& \multicolumn{3}{c|}{\textsl{Claim Registration}} & \multicolumn{3}{c|}{\textsl{Evaluate}} \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Deterioration}} & \multicolumn{3}{c|}{0.10} & \multicolumn{3}{c|}{0.03} \\ \hline
+%\multicolumn{2}{c}{} & \multicolumn{4}{|c|}{\textbf{Business process}} \\ \cline{3-6}
+%\multicolumn{2}{c|}{} & \multicolumn{4}{|c|}{\textsl{Claim Registration}} \\ \hline
+%\multicolumn{2}{|c|}{\textbf{Deterioration}} & \multicolumn{4}{|c|}{0.15}\\ \hline
 \end{tabular}
 \caption{Claim process, \textsl{Data Accuracy} (As-Is)}
 \label{tab:claim_as_is}

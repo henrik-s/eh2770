@@ -65,6 +65,7 @@ The customer is able to send an e-mail to get support from J.D.H. Insurance's su
 %
 \subsection{The As-Is MAP Model}
 \label{sec:as_is_map_model}
+TODO CHANGE TEXT\\\\
 In this section we depict the different business processes translated to MAP based on the ArchiMate models presented earlier in the report. The following figures (\ref{fig:map_business_as_is}-\ref{fig:map_information_as_is}) maps directly to views in the MAP model, thus, the figure depicted in the beginning of the report is all the view merged together. All views can be viewed in the attached iEaat file.
 %
 \subsubsection{Business Architecture}
@@ -73,7 +74,7 @@ In this section we depict the different business processes translated to MAP bas
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.1]{images/map_business_asis.png}}
+		%\fbox{\includegraphics[scale = 0.1]{images/map_business_asis.png}}
 		\caption{As-Is Business Architecture (\emph{MAP})}
 		\label{fig:map_business_as_is}
 	\end{figure}
@@ -85,7 +86,7 @@ In this section we depict the different business processes translated to MAP bas
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.07]{images/map_application_asis.png}}
+		%\fbox{\includegraphics[scale = 0.07]{images/map_application_asis.png}}
 		\caption{As-Is Information Architecture (\emph{MAP})}
 		\label{fig:map_application_as_is}
 	\end{figure}
@@ -97,7 +98,7 @@ In this section we depict the different business processes translated to MAP bas
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.1]{images/map_information_asis.png}}
+		%\fbox{\includegraphics[scale = 0.1]{images/map_information_asis.png}}
 		\caption{As-Is Information System Architecture (\emph{MAP})}
 		\label{fig:map_information_as_is}
 	\end{figure}
@@ -109,7 +110,7 @@ In this section we depict the different business processes translated to MAP bas
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.09]{images/map_infrastructure_asis.png}}
+		%\fbox{\includegraphics[scale = 0.09]{images/map_infrastructure_asis.png}}
 		\caption{As-Is Infrastructre Architecture (\emph{MAP})}
 		\label{fig:map_information_as_is}
 	\end{figure}
@@ -125,11 +126,12 @@ The claim registration service which J.D.H. Insurance provide to the customers t
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.35]{images/map_claim_data.png}}
+		%\fbox{\includegraphics[scale = 0.35]{images/map_claim_data.png}}
 		\caption{Data accuracy for the Claim data from received application to the evaluated claim object in the claim management system (\emph{MAP})}
 		\label{fig:map_claim_data}
 	\end{figure}
 \end{center}
+TODO UPDATE VALUES\\\\\
 The claim application is sent by the insurant to the company and the input accuracy of the application can be assumed to be very high, 0.99. The application is processed by the claim administrator in the claim registration process and the translation from the paper application to the digital description tend to create loss of information, the input accuracy of this is 0.80. The evaluator then reads this description and extends it with an answer, this extension has an input accuracy of 0.95.\\\\
 %
 This results in a total accuracy loss of 0.81 which seems like a low value for a company evaluating information provided by their customers and which aim to provide the best insurances.
@@ -143,7 +145,7 @@ One of J.D.H. Insurance visions is to provide the best support for their custome
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.35]{images/map_support_phone_availability.png}}
+		%\fbox{\includegraphics[scale = 0.35]{images/map_support_phone_availability.png}}
 		\caption{Service availability of the Phone support access service (\emph{MAP})}
 		\label{fig:map_support_phone_availability}
 	\end{figure}
@@ -151,16 +153,19 @@ One of J.D.H. Insurance visions is to provide the best support for their custome
 The Phone support system has an availability of 0.95. The Phone system dispatcher has an availability of 0.96. The infrastructure function Call management and the infrastructure service call provider has evidential availability of 0.95.\\\\
 %
 The result of the analysis of these values gives an availability of 0.91 for the service, which is a low value for a service which should be able to compete with other companies similar services.
+\\TODO TEXT ABOUT MAIL AVAILABILITY\\
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.09]{images/map_support_email_availability.png}}
+		%\fbox{\includegraphics[scale = 0.09]{images/map_support_email_availability.png}}
 		\caption{Service availability of the Mail support service (\emph{MAP})}
 		\label{fig:map_support_mail_availability}
 	\end{figure}
 \end{center}
+
+\vspace{-1cm}
 \input{tables/support_as_is}
 %
 \subsubsection{Order Registration and Sending Reports - Cost}
@@ -171,7 +176,7 @@ The registration of order application and sending the order acceptance letter as
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.35]{images/map_order_cost.png}}
+		%\fbox{\includegraphics[scale = 0.35]{images/map_order_cost.png}}
 		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
 		\label{fig:map_order_cost}
 	\end{figure}
@@ -179,6 +184,9 @@ The registration of order application and sending the order acceptance letter as
 The manager is a yearly cost for the company of 500' SEK, that includes salary and recruitment costs etc. The Order management system had an initial cost of 1500' SEK since its a large and complex system and a yearly cost of 300' SEK. The Order management database had an initial cost of 400' SEK and an yearly cost of 100' SEK. The CRM database is the most modern of these systems and was an initial cost of 700' SEK and is a yearly cost of 50' SEK.\\\\
 %
 The analysis resulted in a cost for the "Order receivement" process of 1525' SEK and a cost for the "Send Order Acceptance" process of 1837500 SEK.
+%
+\\\\UPDATE TEXT ROLE ETC
+\input{tables/order_cost_as_is}
 %
 \subsubsection{Order Registration - Availability}
 \label{sec:order_availability}
@@ -188,13 +196,13 @@ In order to achieve maximum customer satisfaction the availability of the order 
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.05]{images/map_order_availability.png}}
+		%\fbox{\includegraphics[scale = 0.05]{images/map_order_availability.png}}
 		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
 		\label{fig:map_order_availability}
 	\end{figure}
 \end{center}
 Next we present the current values for some entities primarily considered when assessing the availability. The first two tables (Nodes \& Application components) are evidential values, meaning, that these are values already set and not computed with through the EAAT tool. Whereas the availability in table the last table are derived values by EAAT.
-\input{tables/order_as_is}
+\input{tables/order_availability_as_is}
 %
 \subsection{Improvements}
 \label{sec:improvements}
