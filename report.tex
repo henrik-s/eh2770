@@ -1,0 +1,77 @@
+\documentclass[a4paper]{article}
+
+%\usepackage{fullpage}
+\usepackage[margin=3.0cm]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{fancyref}
+\setcounter{secnumdepth}{5}
+
+
+\usepackage{hyperref}
+\hypersetup{
+	pdfauthor = {Henrik Sohlberg},
+	pdftitle = {eh2770: Assignment 2: JDH Insurance},
+	pdfsubject = {EH2770},
+	pdfkeywords = {EAAT, MAP},
+	pdfcreator = {LaTeX with hyperref package},
+	pdfproducer = {latex}
+}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+
+\title{Assignment II \\Architectural Change of J.D.H. Insurance}
+
+\author{Henrik Sohlberg <\href{mailto:hsoh@kth.se}{hsoh@kth.se}> \\%
+		Jonas Eyob <\href{mailto:eyob@kth.se}{eyob@kth.se}> \\%
+		Daniel R\"onnow <\href{mailto:ronnow@kth.se}{ronnow@kth.se}>
+}
+
+\fancyhf{}
+\fancyhead[LE,RO]{\slshape \rightmark}
+\fancyhead[LO,RE]{\slshape \leftmark}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+\thispagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+\newpage    
+\tableofcontents
+\newpage
+\pagestyle{fancy}
+\setcounter{page}{1}
+
+\input{1}
+\clearpage
+
+\input{2}
+\clearpage
+
+\input{3}
+\clearpage
+
+\input{4}
+\clearpage
+
+\input{5}
+\clearpage
+
+\input{references}
+\clearpage
+
+\input{appendices}
+%\clearpage
+ 
+
+\end{document}

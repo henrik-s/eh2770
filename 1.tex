@@ -1,0 +1,60 @@
+\section{Introduction}
+\label{sec:introduction}
+This report intends to overview the J.D.H. Insurance's, a fictive company, enterprise architecture as it is today, and subsequently describe models, suggestions for improvements and plan the transition from the as-is architecture to the to-be. The scope has been limited to the section in the organisation where the external customer plays an active role, including business processes such as when a customer orders an insurance, reports a claim, needs support, and also internal processes supporting these main processes.
+\subsection{J.D.H. Insurance}
+\label{sec:j_d_h_insurance}
+J.D.H. Insurance is an insurance company with focus on private persons. The company has, during some years, increased their number of customers constantly, making the company one of the leading insurance companies in the country. This has lead to many changes throughout the years and the CEO and other managers has during the last years experienced that the informations systems does not support the business enough to deliver value to the business and customers along with increasing cost for the systems. The company is now in need of, and want to transform the architecture into a more efficient and standardized enterprise architecture. This they believe could be reached by analyzing their current architecture and develop it into an architecture more supporting, more standardized and more cost-efficient.
+\subsection{Vision Statement}
+\label{sec:vision_statement}
+J.D.H. Insurance's intention is to become the greatest company providing insurance to customers in terms of products, support, and value. It shall be pleasurable to become a customer through each of the company's sale channels. It shall be satisfying to be a customer, with tremendous support and service.
+\subsection{Goals}
+\label{sec:goals}
+The goal with this paper is to analyze the processes included in the above mentioned scope to approach the visions stated. J.D.H. Insurance can become a greater company by increasing the accuracy in the claim registration to support the decision making of such claim and to increase the availability of the support processes to ensure customer satisfaction in case of arising problems. By increasing the availability of the sales channels, the process of ordering an insurance can be more pleasurable to the customer. A reduced cost of the same process could be exploited by J.D.H. Insurance to become more competitive in compensating customers, which also creates value to them.
+\subsection{EA Utilities}
+\label{sec:ea_utilities}
+The work of this architectural change uses two distinct utilities for executing the analyze and finding an architecture aligning with the requirements of the CEO and the other stakeholders. The first utility is the Multi Attribute Prediction metamodel (MAP, \vref{sec:map_metamodel}) which is capable of assigning values to attributes of the modeled entities to be able to analyze the models with specific attributes in mind. The second is the Enterprise Architecture Analysis Tool (EAAT, \vref{sec:eaat}) which is an application capable of modeling using the MAP metamodel and is capable of running analyzes. These utilities are further explained in the coming sections.
+\subsubsection{ArchiMate}
+\label{sec:archimate}
+ArchiMate, a modelling language specified by The Open Group, offers a common way to model an enterprise architecture. It is based on three layers - business, application, and technology - providing the possibility to unambiguously describe, analyze, and visualize complex structures within an organization. Each layer consists of objects describing a certain element within a specific layer.
+\subsubsection{MAP Metamodel}
+\label{sec:map_metamodel}
+The Multi Attribute Prediction model (MAP) is based on the ArchiMate language and can be described as an extension to it, enabling further analysis of an enterprise architecture . The tool uses the same concept with layers and services and adds the functionality of assigning attribute values to elements. These attributes are application modifiability, data accuracy, application usage, service availability, interoperability, cost, and utility.\\\\
+%
+\textbf{Application modifiability} is of great interest when analyzing IT-system architecture as the metric determines how complex it is to modify and replace existing modules and/or systems. For example, several systems may probably be interconnected, if we replace one of them - how much work will be needed to make the new structure operational? The Application modifiability attribute seeks to answer this question and in general help decision makers in similar situations. The value is based on three metrics for an application: complexity, size, and coupling.\\\\
+%
+\textbf{Data accuracy} refers to the quality of data in terms of correctness and error. Low data accuracy may be the result of the human factor, when it was manually inputted to a system. As data flow through the enterprise, it is important to define data accuracy to be able to analyze the impact certain data have to the whole system.\\\\
+%
+As the portfolio of systems within an organization grows, the likelihood of having redundant applications increases. At the same time, it can be difficult to understand the importance of a system. A tool to analyze this issue is to calculate the Application usage, which (not surprisingly) indicate the usage for an application. Roughly, the value is calculated based on how a user perceive a technology to fulfill a work task.\\\\
+%
+\textbf{Service availability} refers to the attribute value describing the availability for a service. This value is determined by statistics regarding the fail-ratio/down-time and time consumed on maintenance on a system. The availability attribute is often rated very highly by IT-system executive since the costs are often of serious magnitude when a system is failing.\\\\
+%
+\textbf{Interoperability} refers to the the communication between different systems. The attribute is used to display which systems that are interoperable. If they "speak" the same language, they can exchange information and thus are interoperable, otherwise not.\\\\
+%
+The attribute \textbf{Cost} is, straightforwardly, important and useful information in an enterprise architecture. In MAP, the cost consists of the initial cost and the yearly cost, which refers to maintenance and support etc.\\\\
+%
+The \textbf{Utility} attribute belongs to a stakeholder and it is a function dependent on a stakeholder's requirements for a service or an application. The value is useful to view the impact a system and its properties has, in terms of utility, for a stakeholder.
+%
+\subsubsection{EAAT tool}
+\label{sec:eaat}
+The Enterprise Architecture Analysis Tool (EAAT) is developed by the school of Electrical Engineering at the Royal Institute of Technology and is capable of modelling and calculating analyzes of an enterprise and the enterprise's information systems. The analysis done in EAAT can be used to support decision making in reaching the target architecture from the vision of the enterprise. The analysis focuses on attributes in the metamodel, and by using MAP as metamodel and EAAT for modelling and analyzing J.D.H. Insurance's enterprise, their vision can be reached by analyzing scenarios to find the most suitable target architecture.
+%
+\subsection{IT-systems}
+\label{sec:it_systems}
+Supporting the business processes within the enterprise are a set of IT-systems addressing a certain needs of the company. Next, the IT-systems used by J.D.H. Insurance are presented briefly.
+%
+\subsubsection{Customer Relationship Management}
+\label{sec:crm}
+Customer Relationship Management (CRM) is a system for analyzing and managing the interaction with existing and potential customers. Through the different capabilities commonly offered by these systems companies can build a more personal relations with the customer and thereby achieve a higher degree of customer satisfaction. In the context of J.D.H. Insurance the CRM system provides means of identifying potential customer needs based on observed customer behaviour.
+\subsubsection{Enterprise Resource Planning}
+\label{sec:erp}
+In the scope of this report the Enterprise Resource Planning (ERP) is a system used for maintaining various information flows within the boundaries of the organization. In J.D.H. Insurance the ERP is used for registering the different compensation claims.      
+\subsubsection{Claim Management System}
+\label{sec:cms}
+The Claim Management System (CMS) is a system within J.D.H. Insurance that handles all claim related inquiries; the functionality of the CMS include, but are not limited to: providing a digitized form for claim reporting, providing claim information connected to a specific customer, customer compensation payment etc. This system in turn collaborates with other systems for performing certain tasks (this is depicted in the models below).
+\subsubsection{Mail Support System}
+\label{sec:mss}
+The Mail Support System (MSS) used in J.D.H. Insurance is a system that utilizes a help desk DB and a mail server in order to offer functionality for: handling of in- and outgoing issue mail as well as providing the help desk worker with a set of tools to ease the work of problem solving. 
+\subsubsection{Order Management System}
+\label{sec:oms}
+The Order Management System (OMS) is the entity within the order flow responsible for handling insurance orders. It uses an independent database for order storage and also collaborates with a CRM system for retrieval of customer information as well as coupling order(s) to customer.  
+
