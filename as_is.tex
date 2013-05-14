@@ -65,8 +65,55 @@ The customer is able to send an e-mail to get support from J.D.H. Insurance's su
 %
 \subsection{The As-Is MAP Model}
 \label{sec:as_is_map_model}
-In this section we depict the different business processes translated to MAP based on the ArchiMate models presented earlier in the report. The following figures (\ref{fig:map_order}-\ref{fig:map_pay}) maps directly to views in the MAP model, thus, the figure depicted in the beginning of the report is all the view merged together. All views can be viewed in the attached iEaat file.
-
+In this section we depict the different business processes translated to MAP based on the ArchiMate models presented earlier in the report. The following figures (\ref{fig:map_business_as_is}-\ref{fig:map_information_as_is}) maps directly to views in the MAP model, thus, the figure depicted in the beginning of the report is all the view merged together. All views can be viewed in the attached iEaat file.
+%
+\subsubsection{Business Architecture}
+\begin{center}
+	\begin{figure}[H]
+		\centering
+		\setlength\fboxsep{7pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[scale = 0.1]{images/map_business_asis.png}}
+		\caption{As-Is Business Architecture (\emph{MAP})}
+		\label{fig:map_business_as_is}
+	\end{figure}
+\end{center}
+%
+\subsubsection{Information Architecture}
+\begin{center}
+	\begin{figure}[H]
+		\centering
+		\setlength\fboxsep{7pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[scale = 0.07]{images/map_application_asis.png}}
+		\caption{As-Is Information Architecture (\emph{MAP})}
+		\label{fig:map_application_as_is}
+	\end{figure}
+\end{center}
+%
+\subsubsection{Information System Architecture}
+\begin{center}
+	\begin{figure}[H]
+		\centering
+		\setlength\fboxsep{7pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[scale = 0.1]{images/map_information_asis.png}}
+		\caption{As-Is Information System Architecture (\emph{MAP})}
+		\label{fig:map_information_as_is}
+	\end{figure}
+\end{center}
+%
+\subsubsection{Infrastructure Architecture}
+\begin{center}
+	\begin{figure}[H]
+		\centering
+		\setlength\fboxsep{7pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[scale = 0.09]{images/map_infrastructure_asis.png}}
+		\caption{As-Is Infrastructre Architecture (\emph{MAP})}
+		\label{fig:map_information_as_is}
+	\end{figure}
+\end{center}
 \subsection{MAP Analysis}
 \label{sec:map_analysis}
 This section contains analysis of segments of the As-Is MAP model, with respect to MAP attributes, where potential change could be made to reach the vision of the company.
@@ -78,7 +125,7 @@ The claim registration service which J.D.H. Insurance provide to the customers t
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.35]{images/map_claim_data.png}}
+		\fbox{\includegraphics[scale = 0.35]{images/map_claim_data.png}}
 		\caption{Data accuracy for the Claim data from received application to the evaluated claim object in the claim management system (\emph{MAP})}
 		\label{fig:map_claim_data}
 	\end{figure}
@@ -96,7 +143,7 @@ One of J.D.H. Insurance visions is to provide the best support for their custome
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.35]{images/map_support_phone_availability.png}}
+		\fbox{\includegraphics[scale = 0.35]{images/map_support_phone_availability.png}}
 		\caption{Service availability of the Phone support access service (\emph{MAP})}
 		\label{fig:map_support_phone_availability}
 	\end{figure}
@@ -109,7 +156,7 @@ The result of the analysis of these values gives an availability of 0.91 for the
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.09]{images/map_support_email_availability.png}}
+		\fbox{\includegraphics[scale = 0.09]{images/map_support_email_availability.png}}
 		\caption{Service availability of the Mail support service (\emph{MAP})}
 		\label{fig:map_support_mail_availability}
 	\end{figure}
@@ -124,7 +171,7 @@ The registration of order application and sending the order acceptance letter as
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.35]{images/map_order_cost.png}}
+		\fbox{\includegraphics[scale = 0.35]{images/map_order_cost.png}}
 		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
 		\label{fig:map_order_cost}
 	\end{figure}
@@ -141,7 +188,7 @@ In order to achieve maximum customer satisfaction the availability of the order 
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.05]{images/map_order_availability.png}}
+		\fbox{\includegraphics[scale = 0.05]{images/map_order_availability.png}}
 		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
 		\label{fig:map_order_availability}
 	\end{figure}
