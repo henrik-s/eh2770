@@ -1,70 +1,80 @@
 \section{To-Be}
 \label{sec:to_be}
-This section will focus on the To-Be architecture of J.D.H. Insurance. Models and analysis of the target architecture will be presented, along with the gaps between the target architecture and the As-Is architecture. These gaps will be the foundation of the coming section.
-%
-\subsection{The To-Be Map Model}
-\label{sec:models_to_be}
-In this section the models of the to-be architecture of J.D.H Insurance will be presented.
-%
+This section will focus on the To-Be architecture of J.D.H. Insurance. Changes from the As-Is architecture and models and analysis of the target architecture to align the architecture with the strategy of the company and to approach the vision stated in this report will be presented. These changes are based on the improvement areas described in the previous section.
+\subsection{Changes to core processes}
+The changes to the core processes are described during this section.
+\subsubsection{Order Process}
+To lower the cost of the order registration process it has been transformed to an automated service on the website which eliminates the costs of the order manager and the order management systems. As the website is already available for browsing insurances, the cost for implementing the ordering service on the website is significantly smaller to the cost of todays employees and order management systems. Since the system for customer relation management has support for storing information about customer's insurances and customer information, this system replaces the order management system. The usage of fewer systems and the usage of the website does not impact the service availability negatively and it makes it possible for the customers to use the service even at closed-office hours of the day.
+\begin{center}
+	\begin{figure}[H]
+		\centering
+		\setlength\fboxsep{7pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[scale = 0.15]{images/map_order_business_tobe.png}}
+		\caption{Ordering an insurance}
+		\label{fig:map_order_tobe}
+	\end{figure}
+\end{center}
+
+\subsubsection{Claim Process}
+To improve the accuracy of the claim registration process today's claim applications found on the website to print and send to the company is replaced by a web service. The big failure of the accuracy is the claim administrator who transforms these paper applications to a digital format using the claim management system, due to applications written by hand or interpretations. A web service registering the claim directly into the claim management database decreases the deterioration in the claim registration process.
+\subsubsection{Support Services}
+As the availability of the mail support service and phone support system depend on different systems and on different employees, a aggregation of the two services increases the availability. As the phone support system is an old system and not as reliable as new systems, the new common help desk system, handling both the phone support and the mail support will be easier to maintain and the availability will thereby increase. This help desk system will be introduced to the current employees of both the mail and the phone support which will ensure flexibility of the employees, making it easier to replace them in case of absent employees.
+
+\subsubsection{IT-Systems}
+\paragraph{Help Desk System}
+
 \subsection{MAP Analysis}
 \label{sec:map_analysis_to_be}
 Analysis of the new architectural changes to the enterprise will be presented in this section.
 %
-\subsubsection{Order Registration - Cost}
+\subsubsection{Order Registration - Cost and Service Availability}
+The changes from today's order registration process to the new processes supported by the web site impacts the cost of the whole registration process. The corresponding processes in the new architecture, Order Recievement and Present Order Completion to be seen in \fref{fig:map_order_cost_to_be}, are fully automated by the web site. \Fref{fig:map_order_cost_to_be} displays the objects of the order registration process analyzed. The analysis is made on both cost and availability, to ensure that the reduction of cost do not affect the availability of the process.
 \label{sec:order_analysis}
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.35]{images/map_order_cost.png}}
-		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
+		\fbox{\includegraphics[scale = 0.07]{images/map_order_analysis_tobe.png}}
+		\caption{\textsl{Cost} and \textsl{Service Availability} of the processes "Order Receivement" and "Present Order Completion"}
 		\label{fig:map_order_cost_to_be}
 	\end{figure}
 \end{center}
+The costs for the web site and the new implementations to it is an initial cost of 500 000 kr and has an yearly cost of 50 000 kr. The web server was an initial cost of 200 000 kr and a yearly cost of 20 000 kr, since the web server already existed in the company, no investment of the server had to be made. The CRM DB also already exists in the company and the initial cost for it was 700 000 kr and a yearly cost of 50 000 kr. This implies that the cost for the Order Registration Service and the Fetch Order Registration Result Service has a cost of 373 750 kr each. The availability of the Applying Order service is calculated to 0.90, from the availabilities of the systems. The values for the attributes Cost and availability for all objects in the view can be seen in \fref{tab:order_cost_to_be} and in \fref{tab:order_availability_to_be}.
 \input{tables/order_cost_to_be}
-%
-\subsubsection{Order Registration - Service Availability}
-\label{sec:order_availability_to_be}
-\begin{center}
-	\begin{figure}[H]
-		\centering
-		\setlength\fboxsep{7pt}
-		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.05]{images/map_order_availability.png}}
-		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
-		\label{fig:map_order_availability_to_be}
-	\end{figure}
-\end{center}
 \input{tables/order_availability_to_be}
 
 \subsubsection{Claim Registration - Data Accuracy}
+The changes to the claim registration process impacted the structure of the data written to the systems. The Claim registration process is now automated and the written description by the user on the website is read and written by the system in digital formats. The new write and read flow of the representation and data sets can be viewed in \fref{fig:map_claim_data_to_be}. 
 \label{sec:claim_analysis_to_be}
 	\begin{center}
 		\begin{figure}[H]
 			\centering
 			\setlength\fboxsep{7pt}
 			\setlength\fboxrule{0.5pt}
-			%\fbox{\includegraphics[scale = 0.35]{images/map_claim_data.png}}
-			\caption{Data accuracy for the Claim data from received application to the evaluated claim object in the claim management system (\emph{MAP})}
+			\fbox{\includegraphics[scale = 0.07]{images/map_claim_analysis_tobe.png}}
+			\caption{\textsl{Data Accuracy} for the Claim Process}
 			\label{fig:map_claim_data_to_be}
 		\end{figure}
 	\end{center}
+	The process "Claim Registration" has now a decreased value of deterioration to 0.01 since the process is automated on the website. This impact the accuracy of the stored claim description (data set) to the better, which now is 0.97. The accuracy of the Notification letter in the end of the process is calculated to 0.92. \Fref{tab:claim_to_be} shows the values of the involved objects and the resulting accuracy of the representation sets and the data sets.
 \input{tables/claim_to_be}
 %
 \subsubsection{Support - Service Availability}
+The aggregation of the phone support service and the mail support service into one support service to increase the availability can be viewed in \fref{fig:map_support_combined_availability_to_be}. The Helpdesk System now enables the support processes and the existing phone dispatcher system and the mailserver are used by the new system. The employees executing today's processes are aggregated to a new role as Helpdesk employee.
 \label{sec:support_analysis_to_be}
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.35]{images/map_support_phone_availability.png}}
-		\caption{Service availability of the new support process (\emph{MAP})}
+		\fbox{\includegraphics[scale = 0.07]{images/map_analysis_support_tobe.png}}
+		\caption{\textsl{Service Availability} of the new support process}
 		\label{fig:map_support_combined_availability_to_be}
 	\end{figure}
 \end{center}
-
+The Phone system dispatcher and the Mail Server are the same as the one now operating. The new Helpdesk system would have an availability of 0.99 and the more flexible Helpdesk employees an availability of 0.97. The Contact Phone Support service then gets an availability of 0.93, the Contact Email Support service an availability of 0.95 and the Customer Respond Service an availability of 0.99. \Fref{tab:support_to_be} views all the availabilities of the systems and the processes.
 \input{tables/support_to_be}
 %
 

@@ -3,34 +3,34 @@
 \label{sec:as_is}
 The As-Is architecture of J.D.H. Insurance is derived based on their most important processes. From these processes the information systems, information objects and technical infrastructure can be identified. The following sections will present each of these important processes and analyze the architecture on different attributes in the MAP metamodel. The full As-Is architecture can be viewed in Appendix A, divided into 4 views; the Business layer, Application layer, Infrastructure layer and the information layer. The attached iEaat file JDHInsuranceAsIs also contains the full As-Is model.
 %
-\subsection{J.D.H. Insurance’s most core processes}
+\subsection{J.D.H. Insurance's most core processes}
 \label{sec:coreShit}
 The models presented in this section considers the As-Is state of the enterprise architecture. The following subsections will describe the important functions in J.D.H. Insurance and each function will be followed by a model explaining the business layer of the process.
 %
 \subsubsection{The Ordering of an Insurance}
 \label{sec:order}
-To order an insurance the customer is able to browse J.D.H. Insurance’s website for the insurance they would like to apply for. The customer is then able to download a paper application form and send it to J.D.H. Insurance by mail for the company’s order managers to register the order and to send an order status response back to the customer before the order of an insurance is completed. Figure 1 shows the business services available for the customer and what processes they are realised by.
+To order an insurance the customer is able to browse J.D.H. Insurance's website for the insurance they would like to apply for. The customer is then able to download a paper application form and send it to J.D.H. Insurance by mail for the company's order managers to register the order and to send an order status response back to the customer before the order of an insurance is completed. \Fref{fig:map_order} shows the business services available for the customer and what processes they are realised by.
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.252]{images/order.jpg}}
-		\caption{Ordering an insurance (\emph{ArchiMate})}
-		\label{fig:archi_order}
+		\fbox{\includegraphics[scale = 0.135]{images/map_order_business_asis.png}}
+		\caption{Ordering an insurance}
+		\label{fig:map_order}
 	\end{figure}
 \end{center}
 \subsubsection{The Process of Claim Registration}
 \label{sec:claim}
-To claim compensation, the customer are able to download a paper claim application from the website. The application, including customer information and claim description, is sent to J.D.H Insurance by mail which is received by a claim administrator which registers it in the Claim management system by hand. A Claim Evaluator evaluates the claim application and compensates the customer in case of valid claim. Either way the claim evaluator notifies the customer by sending a letter with his answer to the claim. Figure 2 displays the services available to the customer and the underlying process. It also shows the processes which the evaluator and administrator executes.
+To claim compensation, the customer are able to download a paper claim application from the website. The application, including customer information and claim description, is sent to J.D.H Insurance by mail which is received by a claim administrator which registers it in the Claim management system by hand. A Claim Evaluator evaluates the claim application and compensates the customer in case of valid claim. Either way the claim evaluator notifies the customer by sending a letter with his answer to the claim. \Fref{fig:map_claim} displays the services available to the customer and the underlying process. It also shows the processes which the evaluator and administrator executes.
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.245]{images/claim.png}}
-		\caption{Claim registration (\emph{ArchiMate})}
-		\label{fig:archi_claim}
+		\fbox{\includegraphics[scale = 0.12]{images/map_claim_business_asis.png}}
+		\caption{Claim registration}
+		\label{fig:map_claim}
 	\end{figure}
 \end{center}
 %
@@ -39,29 +39,29 @@ To claim compensation, the customer are able to download a paper claim applicati
 J.D.H. Insurance provides various support services for their customers and possible customers, which includes support by phone or e-mail. Each support service are described in the following subsections.
 \paragraph{Phone Support}
 \label{sec:phone}
-The customer has the option to call in to J.D.H. Insurance for support. The process works like following: the customer makes a call, whereupon this call gets registered by the phone support system and then placed in a stack by the phone dispatcher. The call then gets handled by someone in the support team which will try to solve the problem over the phone. While trying to solve the problem at hand, the supporter is provided with a FAQ service that will help in the problem solving. The results of the solving process is directly reported back to the customer in the call.
+The customer has the option to call in to J.D.H. Insurance for support. The process is displayed in \fref{fig:map_phone} and works like following: the customer makes a call, whereupon this call gets registered by the phone support system and then placed in a stack by the phone dispatcher. The call then gets handled by someone in the support team which will try to solve the problem over the phone. While trying to solve the problem at hand, the supporter is provided with a FAQ service that will help in the problem solving. The results of the solving process is directly reported back to the customer in the call. 
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.25]{images/phone.png}}
-		\caption{Customer support via telephone (\emph{ArchiMate})}
-		\label{fig:archi_phone}
+		\fbox{\includegraphics[scale = 0.16]{images/map_phone_business_asis.png}}
+		\caption{Customer support via telephone}
+		\label{fig:map_phone}
 	\end{figure}
 \end{center}
 %
 \paragraph{E-Mail Support}
 \label{sec:mail_support}
-The customer is able to send an e-mail to get support from J.D.H. Insurance’s support team. The e-mail sent to the support team gets registered in the mail support system for help desk team to try solve. When the issue is handled the employee handling the issue sends an e-mail back to the customer including the results from the investigation. Figure 5 shows the services available to the customer and what processes the support team executes to enable e-mail support.
+The customer is able to send an e-mail to get support from J.D.H. Insurance's support team. The e-mail sent to the support team gets registered in the mail support system for help desk team to try solve. When the issue is handled the employee handling the issue sends an e-mail back to the customer including the results from the investigation. \Fref{fig:map_mail} shows the services available to the customer and what processes the support team executes to enable e-mail support.
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.25]{images/mailsupport.png}}
-		\caption{Customer support via e-mail (\emph{ArchiMate})}
-		\label{fig:archi_mail}
+		\fbox{\includegraphics[scale = 0.15]{images/map_mail_business_asis.png}}
+		\caption{Customer support via e-mail}
+		\label{fig:map_mail}
 	\end{figure}
 \end{center}
 %
@@ -78,78 +78,69 @@ The registration of order application and sending the order acceptance letter as
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.35]{images/map_order_cost.png}}
-		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
+		\fbox{\includegraphics[scale = 0.12]{images/map_order_analysis_asis.png}}
+		\caption{Cost of the processes \textsl{Order Receivement Process} and \textsl{Send Order Acceptance Process}}
 		\label{fig:map_order_cost}
 	\end{figure}
 \end{center}
-The manager is a yearly cost for the company of 500' SEK, that includes salary and recruitment costs etc. The Order management system had an initial cost of 1500' SEK since its a large and complex system and a yearly cost of 300' SEK. The Order management database had an initial cost of 400' SEK and an yearly cost of 100' SEK. The CRM database is the most modern of these systems and was an initial cost of 700' SEK and is a yearly cost of 50' SEK.\\\\
+The manager is a yearly cost for the company of 500 000 SEK, that includes salary and recruitment costs etc. The Order Management System had an initial cost of 1 500 000 SEK since its a large and complex system and a yearly cost of 300 000 SEK. The Order Management database had an initial cost of 400 000 SEK and an yearly cost of 100 000 SEK. The CRM database is the most modern of these systems and was an initial cost of 700 000 SEK and is a yearly cost of 50 000 SEK. \\\\
 %
-The analysis resulted in a cost for the "Order receivement" process of 1525' SEK and a cost for the "Send Order Acceptance" process of 1837500 SEK.
+The analysis resulted in a cost for the \textsl{Order Receivement Process} of 1 525 000 SEK and a cost for the \textsl{Send Order Acceptance Process} of 1 837 500 SEK. All the values is reflected in \fref{tab:order_cost_as_is}.
 %
 \input{tables/order_cost_as_is}
 %
 \subsubsection{Order Registration - Service Availability}
 \label{sec:order_availability}
-In order to achieve maximum customer satisfaction the availability of the order registration service is crucial, as this currently is the sole entry point for customers intending to purchase an insurance. Consequently an increase in order availability could then help mitigate situations where a customer is unable to make an order due to system failure; and potentially missing out in a customer. In \fref{fig:map_order_availability}, the current as-is situation of order registration view is depicted.
-\begin{center}
-	\begin{figure}[H]
-		\centering
-		\setlength\fboxsep{7pt}
-		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.05]{images/map_order_availability.png}}
-		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
-		\label{fig:map_order_availability}
-	\end{figure}
-\end{center}
-Next we present the current values for some entities primarily considered when assessing the availability. The first two tables (Nodes \& Application components) are evidential values, meaning, that these are values already set and not computed with through the EAAT tool. Whereas the availability in table the last table are derived values by EAAT.
+In order to achieve maximum customer satisfaction the availability of the order registration service is crucial, as this currently is the sole entry point for customers intending to purchase an insurance. And since the current level of availability for the order registration is sufficient, consequently this means that maintaining the current order availability level, in spite of an attempt to lower the order registration cost, is of the essence. In \fref{fig:map_order_cost}, the current As-Is situation of order registration view is depicted. \\\\
+%
+Next, in \fref{tab:order_availability_as_is}, we present the current values for some entities primarily considered when assessing the availability. The resulting service availability of the Order Receivement Process and the Send Order Acceptance service are 0.92 respectively.
 \input{tables/order_availability_as_is}
 
 \subsubsection{Claim Registration - Data Accuracy}
 \label{sec:claim_analysis}
-The claim registration service which J.D.H. Insurance provide to the customers they insure has a critical point where it is important that the accuracy of the claims application maintain, that is when the claim administrator receives the claim application from an insurant and registers it into the claim management system. For J.D.H. Insurance to ensure that no information is lost in this process it is vital to analyze the data accuracy of it to see if it can be improved by a new architecture providing higher accuracy. The analyze is done by using the following view, displayed in figure 11.
+The claim registration service which J.D.H. Insurance provide to the customers they insure has a critical point where it is important that the accuracy of the claims application maintain, that is when the claim administrator receives the claim application from an insurant and registers it into the claim management system. For J.D.H. Insurance to ensure that no information is lost in this process it is vital to analyze the data accuracy of it to see if it can be improved by a new architecture providing higher accuracy. The analyze is done by using the following view, displayed in \fref{fig:map_claim_data}.
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.35]{images/map_claim_data.png}}
-		\caption{Data accuracy for the Claim data from received application to the evaluated claim object in the claim management system (\emph{MAP})}
+		\fbox{\includegraphics[scale = 0.08]{images/map_claim_analysis_asis.png}}
+		\caption{Data accuracy for the Claim data from received application to the evaluated claim object in the claim management system}
 		\label{fig:map_claim_data}
 	\end{figure}
 \end{center}
 The claim application is sent by the insurant to the company and the input accuracy of the application can be assumed to be very high, 0.99. The application is processed by the claim administrator in the claim registration process and the translation from the paper application to the digital description tend to create loss of information, the deterioration of this process is 0.1. When the evaluator writes a result to the claim there is a small loss of information. The deterioration of this process is 0.03. \\\\ 
 %
-This results in a accuracy after the claim registration process of 0.89, and after the evaluation process an accuracy of 0.85, which seems like a low value for a company evaluating information provided by their customers and which aim to provide competitive insurances. Table x shows the values and the resulting accuracies in the process.
+This results in a accuracy after the claim registration process of 0.89, and after the evaluation process an accuracy of 0.85, which seems like a low value for a company evaluating information provided by their customers and which aim to provide competitive insurances. \Fref{tab:claim_as_is} shows the values and the resulting accuracies in the process.
 \input{tables/claim_as_is}
 %
 \subsubsection{Support - Service Availability}
 \label{sec:support_analysis}
-One of J.D.H. Insurance visions is to provide the good support for their customers. One important aspect of this support is the availability of the support. Clearly the access points for the support functions need to be available to the customers if they should be able to contact J.D.H. Insurance. An analysis of the availability of the access points of both the support architectures would then be of value for J.D.H. Insurance, and to evaluate what improvements that could be done to increase the availability of these services. The following view, figure 12, shows the service of calling to the phone support and analyzes its availability to the customers, and figure x displays the access point of mail support analyzed.
+One of J.D.H. Insurance visions is to provide the good support for their customers. One important aspect of this support is the availability of the support. Clearly the access points for the support functions need to be available to the customers if they should be able to contact J.D.H. Insurance. An analysis of the availability of the access points of both the support architectures would then be of value for J.D.H. Insurance, and to evaluate what improvements that could be done to increase the availability of these services. The following view, \fref{fig:map_support_phone_availability}, shows the service of calling to the phone support and analyzes its availability to the customers, and \fref{fig:map_support_mail_availability} displays the access point of mail support analyzed.
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.35]{images/map_support_phone_availability.png}}
-		\caption{Service availability of the Phone support access service (\emph{MAP})}
+		\fbox{\includegraphics[scale = 0.10]{images/map_phone_analysis_asis.png}}
+		\caption{Service availability of the Phone support access service}
 		\label{fig:map_support_phone_availability}
 	\end{figure}
 \end{center}
-Table x contains the values for each availability of the systems in the phone support process. The result of the analysis of these values gives an availability of 0.85 for the Contact phone support service, which is a low value for a service which should be able to compete with other companies similar services.
+\Fref{tab:support_as_is} contains the values for each availability of the systems in the phone support process. The result of the analysis of these values gives an availability of 0.85 for the Contact phone support service, which is a low value for a service which should be able to compete with other companies similar services.
 \begin{center}
 	\begin{figure}[H]
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.09]{images/map_support_email_availability.png}}
-		\caption{Service availability of the Mail support service (\emph{MAP})}
+		\fbox{\includegraphics[scale = 0.09]{images/map_mail_analysis_asis.png}}
+		\caption{Service availability of the Mail support service}
 		\label{fig:map_support_mail_availability}
 	\end{figure}
 \end{center}
 
 \input{tables/support_as_is}
-Table x displays the availabilities of the systems in the mail support process. The analysis results in an availability of the Contact mail support service of 0.90, which seems quite low for both being a mail service and for being an important service to customers.\\\\
+\Fref{tab:support_as_is} also displays the availabilities of the systems in the mail support process. The analysis results in an availability of the Contact mail support service of 0.90, which seems quite low for both being a mail service and for being an important service to customers.\\\\
 %
 \emph{Note: We experienced problems with EAAT during this analysis. EAAT did not calculate a distinct value for the Register issue process. The availability has been calculated manually, using multiplication of the two availabilities of the application services Issue Registration Service and Mail Recognition.}
 %
