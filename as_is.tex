@@ -67,6 +67,42 @@ The customer is able to send an e-mail to get support from J.D.H. Insurance's su
 \subsection{MAP Analysis}
 \label{sec:map_analysis}
 This section contains analysis of segments of the As-Is MAP model, with respect to MAP attributes, where potential change could be made to reach the vision of the company.
+
+\subsubsection{Order Registration - Cost}
+\label{sec:order_analysis}
+The registration of order application and sending the order acceptance letter as response are two processes which uses several systems and a role in the company. The role is an Order manager registering and sending acceptance letters. The systems he uses are order management systems, the order management database and the customer relation database. All this systems and the role seems quite costly for such a simple process, and to reach the vision of the company a more cost efficient architecture of these processes would help J.D.H. Insurance to provide better services and insurances. This architecture is interesting to analyze since it would be possible to replace the manager with an automated system and improve the usage of the order management system. The following view, \fref{fig:map_order_cost}, shows the view analyzed for finding cost in the processes which includes the manager.
+\begin{center}
+	\begin{figure}[H]
+		\centering
+		\setlength\fboxsep{7pt}
+		\setlength\fboxrule{0.5pt}
+		%\fbox{\includegraphics[scale = 0.35]{images/map_order_cost.png}}
+		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
+		\label{fig:map_order_cost}
+	\end{figure}
+\end{center}
+The manager is a yearly cost for the company of 500' SEK, that includes salary and recruitment costs etc. The Order management system had an initial cost of 1500' SEK since its a large and complex system and a yearly cost of 300' SEK. The Order management database had an initial cost of 400' SEK and an yearly cost of 100' SEK. The CRM database is the most modern of these systems and was an initial cost of 700' SEK and is a yearly cost of 50' SEK.\\\\
+%
+The analysis resulted in a cost for the "Order receivement" process of 1525' SEK and a cost for the "Send Order Acceptance" process of 1837500 SEK.
+%
+\input{tables/order_cost_as_is}
+%
+\subsubsection{Order Registration - Service Availability}
+\label{sec:order_availability}
+In order to achieve maximum customer satisfaction the availability of the order registration service is crucial, as this currently is the sole entry point for customers intending to purchase an insurance. Consequently an increase in order availability could then help mitigate situations where a customer is unable to make an order due to system failure; and potentially missing out in a customer. In \fref{fig:map_order_availability}, the current as-is situation of order registration view is depicted.
+\begin{center}
+	\begin{figure}[H]
+		\centering
+		\setlength\fboxsep{7pt}
+		\setlength\fboxrule{0.5pt}
+		%\fbox{\includegraphics[scale = 0.05]{images/map_order_availability.png}}
+		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
+		\label{fig:map_order_availability}
+	\end{figure}
+\end{center}
+Next we present the current values for some entities primarily considered when assessing the availability. The first two tables (Nodes \& Application components) are evidential values, meaning, that these are values already set and not computed with through the EAAT tool. Whereas the availability in table the last table are derived values by EAAT.
+\input{tables/order_availability_as_is}
+
 \subsubsection{Claim Registration - Data Accuracy}
 \label{sec:claim_analysis}
 The claim registration service which J.D.H. Insurance provide to the customers they insure has a critical point where it is important that the accuracy of the claims application maintain, that is when the claim administrator receives the claim application from an insurant and registers it into the claim management system. For J.D.H. Insurance to ensure that no information is lost in this process it is vital to analyze the data accuracy of it to see if it can be improved by a new architecture providing higher accuracy. The analyze is done by using the following view, displayed in \fref{fig:map_claim_data}.
@@ -115,40 +151,7 @@ The result of the analysis of these values gives an availability of 0.91 for the
 
 \input{tables/support_as_is}
 %
-\subsubsection{Order Registration and Sending Reports - Cost}
-\label{sec:order_analysis}
-The registration of order application and sending the order acceptance letter as response are two processes which uses several systems and a role in the company. The role is an Order manager registering and sending acceptance letters. The systems he uses are order management systems, the order management database and the customer relation database. All this systems and the role seems quite costly for such a simple process, and to reach the vision of the company a more cost efficient architecture of these processes would help J.D.H. Insurance to provide better services and insurances. This architecture is interesting to analyze since it would be possible to replace the manager with an automated system and improve the usage of the order management system. The following view, \fref{fig:map_order_cost}, shows the view analyzed for finding cost in the processes which includes the manager.
-\begin{center}
-	\begin{figure}[H]
-		\centering
-		\setlength\fboxsep{7pt}
-		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.35]{images/map_order_cost.png}}
-		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
-		\label{fig:map_order_cost}
-	\end{figure}
-\end{center}
-The manager is a yearly cost for the company of 500' SEK, that includes salary and recruitment costs etc. The Order management system had an initial cost of 1500' SEK since its a large and complex system and a yearly cost of 300' SEK. The Order management database had an initial cost of 400' SEK and an yearly cost of 100' SEK. The CRM database is the most modern of these systems and was an initial cost of 700' SEK and is a yearly cost of 50' SEK.\\\\
-%
-The analysis resulted in a cost for the "Order receivement" process of 1525' SEK and a cost for the "Send Order Acceptance" process of 1837500 SEK.
-%
-\input{tables/order_cost_as_is}
-%
-\subsubsection{Order Registration - Availability}
-\label{sec:order_availability}
-In order to achieve maximum customer satisfaction the availability of the order registration service is crucial, as this currently is the sole entry point for customers intending to purchase an insurance. Consequently an increase in order availability could then help mitigate situations where a customer is unable to make an order due to system failure; and potentially missing out in a customer. In \fref{fig:map_order_availability}, the current as-is situation of order registration view is depicted.
-\begin{center}
-	\begin{figure}[H]
-		\centering
-		\setlength\fboxsep{7pt}
-		\setlength\fboxrule{0.5pt}
-		%\fbox{\includegraphics[scale = 0.05]{images/map_order_availability.png}}
-		\caption{Cost of the processes "Order Receivement" and "Send Order Acceptance" (\emph{MAP})}
-		\label{fig:map_order_availability}
-	\end{figure}
-\end{center}
-Next we present the current values for some entities primarily considered when assessing the availability. The first two tables (Nodes \& Application components) are evidential values, meaning, that these are values already set and not computed with through the EAAT tool. Whereas the availability in table the last table are derived values by EAAT.
-\input{tables/order_availability_as_is}
+
 %
 \subsection{Improvements}
 \label{sec:improvements}
