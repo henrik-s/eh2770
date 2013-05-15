@@ -1,10 +1,10 @@
 \section{To-Be}
 \label{sec:to_be}
-This section will focus on the To-Be architecture of J.D.H. Insurance. Changes from the As-Is architecture and models and analysis of the target architecture to align the architecture with the strategy of the company and to approach the vision stated in this report will be presented. These changes are based on the improvement areas described in the previous section.
+This section will focus on the To-Be architecture of J.D.H. Insurance. Changes from the As-Is architecture and models and analysis of the target architecture to align the architecture with the strategy of the company and to approach the vision stated in this report will be presented. These changes are based on the improvement areas described in the previous section. The full To-Be architecture divided in business layer, application layer, infrastructure layer and information layer can be seen in Appendix B. Furthermore, the full architecture can be seen in the attached iEaat file JDHInsuranceToBe.
 \subsection{Changes to core processes}
 The changes to the core processes are described during this section.
 \subsubsection{Order Process}
-To lower the cost of the order registration process it has been transformed to an automated service on the website which eliminates the costs of the order manager and the order management systems. As the website is already available for browsing insurances, the cost for implementing the ordering service on the website is significantly smaller to the cost of todays employees and order management systems. Since the system for customer relation management has support for storing information about customer's insurances and customer information, this system replaces the order management system. The usage of fewer systems and the usage of the website does not impact the service availability negatively and it makes it possible for the customers to use the service even at closed-office hours of the day.
+To lower the cost of the order registration process it has been transformed to an automated service on the website which eliminates the costs of the order manager and the order management systems. As the website is already available for browsing insurances, the cost for implementing the ordering service on the website is significantly smaller to the cost of todays employees and order management systems. Since the system for customer relation management has support for storing information about customer's insurances and customer information, this system replaces the order management system. Fewer systems and the usage of the website does not impact the service availability negatively and it makes it possible for the customers to use the service even at closed-office hours of the day. The websites functionality of browsing insurances remain and the change is made to the architecture supporting the Apply Order service. The customer is now able to send an order from the website and instead of receiving an order acceptance letter, the website directly presents the order acceptance. \Fref{fig:map_order_tobe} shows the new underlying architecture of the Apply order service and the full architecture of the Order process can be seen in the mentioned iEaat file in the view Order.
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -17,13 +17,29 @@ To lower the cost of the order registration process it has been transformed to a
 \end{center}
 
 \subsubsection{Claim Process}
-To improve the accuracy of the claim registration process today's claim applications found on the website to print and send to the company is replaced by a web service. The big failure of the accuracy is the claim administrator who transforms these paper applications to a digital format using the claim management system, due to applications written by hand or interpretations. A web service registering the claim directly into the claim management database decreases the deterioration in the claim registration process.
+To improve the accuracy of the claim registration process today's claim applications found on the website to print and send to the company is replaced by a web service. The big failure of the accuracy is the claim administrator who transforms these paper applications to a digital format using the claim management system, due to applications written by hand or interpretations. A web service registering the claim directly into the claim management database decreases the deterioration in the claim registration process. The function of the Claim evaluator will remain and the processes executed by her will not be affected by the change. The change is made in the architecture supporting the Claim Compensation Service. \Fref{fig:map_claim_tobe} displays the new architecture of that service and the full architecture of the Claim process can be seen in the mentioned iEaat file in the view Claim.
+\begin{center}
+	\begin{figure}[H]
+		\centering
+		\setlength\fboxsep{7pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[scale = 0.15]{images/map_claim_business_tobe.png}}
+		\caption{Claim registration}
+		\label{fig:map_claim_tobe}
+	\end{figure}
+\end{center}
 \subsubsection{Support Services}
-As the availability of the mail support service and phone support system depend on different systems and on different employees, a aggregation of the two services increases the availability. As the phone support system is an old system and not as reliable as new systems, the new common help desk system, handling both the phone support and the mail support will be easier to maintain and the availability will thereby increase. This help desk system will be introduced to the current employees of both the mail and the phone support which will ensure flexibility of the employees, making it easier to replace them in case of absent employees.
-
-\subsubsection{IT-Systems}
-\paragraph{Help Desk System}
-
+As the availability of the mail support service and phone support system depend on different systems and on different employees, a aggregation of the two services increases the availability. As the phone support system is an old system and not as reliable as new systems, the new common Help desk system, handling both the phone support and the mail support will be easier to maintain and the availability will thereby increase. The phone dispatcher system and the mail server are still of use and will be integrated to this system. The Help desk system will be introduced to the current employees of both the mail and the phone support which will ensure higher flexibility of the employees, making it easier to replace them in case of absent employees. In \fref{fig:map_support_tobe}, the business layer of the new architecture is presented and in the mentioned iEaat file, the whole architecture for the Support service can be view in the Support view.
+\begin{center}
+	\begin{figure}[H]
+		\centering
+		\setlength\fboxsep{7pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[scale = 0.15]{images/map_support_business_tobe.png}}
+		\caption{Support process}
+		\label{fig:map_support_tobe}
+	\end{figure}
+\end{center}
 \subsection{MAP Analysis}
 \label{sec:map_analysis_to_be}
 Analysis of the new architectural changes to the enterprise will be presented in this section.
@@ -43,6 +59,7 @@ The changes from today's order registration process to the new processes support
 \end{center}
 The costs for the web site and the new implementations to it is an initial cost of 500 000 kr and has an yearly cost of 50 000 kr. The web server was an initial cost of 200 000 kr and a yearly cost of 20 000 kr, since the web server already existed in the company, no investment of the server had to be made. The CRM DB also already exists in the company and the initial cost for it was 700 000 kr and a yearly cost of 50 000 kr. This implies that the cost for the Order Registration Service and the Fetch Order Registration Result Service has a cost of 373 750 kr each. The availability of the Applying Order service is calculated to 0.90, from the availabilities of the systems. The values for the attributes Cost and availability for all objects in the view can be seen in \fref{tab:order_cost_to_be} and in \fref{tab:order_availability_to_be}.
 \input{tables/order_cost_to_be}
+\emph{Note: We experienced some problem with EAAT calculating this, the cost when calculated was 0 but for the two supporting application services the cost was calculated. As the service is supported by two processes supported by each of these services, we just added the cost for the application services as the cost for the Applying Order.}
 \input{tables/order_availability_to_be}
 
 \subsubsection{Claim Registration - Data Accuracy}
