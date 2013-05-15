@@ -1,13 +1,15 @@
 %\section{The As-Is Architecture}
 \section{As-Is}
 \label{sec:as_is}
-The As-Is architecture of J.D.H. Insurance is derived from their most important processes. From these processes the information systems, information objects and technical infrastructure can be identified. The following sections will present each of these important processes and their underlying systems, objects and infrastructure.
-\subsection{J.D.H. Insurance's most core processes, systems and objects}
+The As-Is architecture of J.D.H. Insurance is derived based on their most important processes. From these processes the information systems, information objects and technical infrastructure can be identified. The following sections will present each of these important processes and analyze the architecture on different attributes in the MAP metamodel. The full As-Is architecture can be viewed in Appendix A, divided into 4 views; the Business layer, Application layer, Infrastructure layer and the information layer. The attached iEaat file JDHInsuranceAsIs also contains the full As-Is model.
+%
+\subsection{J.D.H. Insurance’s most core processes}
 \label{sec:coreShit}
-The models presented in this section considers the As-is state of the enterprise architecture. The following subsections will describe the important functions in J.D.H. Insurance and each function will be followed by a model explaining the business processes and objects, information system and the underlying technology. These models are high-level overview ArchiMate models of the processes and systems to give a picture of the enterprise and they may differ slightly from the later presented As-Is model in the MAP language.
+The models presented in this section considers the As-Is state of the enterprise architecture. The following subsections will describe the important functions in J.D.H. Insurance and each function will be followed by a model explaining the business layer of the process.
+%
 \subsubsection{The Ordering of an Insurance}
 \label{sec:order}
-To order an insurance the customer is able to browse J.D.H. Insurance's website for the insurance they would like to apply for. The customer is then able to download a paper application form and send it to J.D.H. Insurance by mail for the company's order managers to register the order and to send an order status response back to the customer before the order of an insurance is completed. \Fref{fig:archi_order} shows the business services available for the customer and what processes they are realised by, which system that supports these processes and the objects used when ordering an insurance.
+To order an insurance the customer is able to browse J.D.H. Insurance’s website for the insurance they would like to apply for. The customer is then able to download a paper application form and send it to J.D.H. Insurance by mail for the company’s order managers to register the order and to send an order status response back to the customer before the order of an insurance is completed. Figure 1 shows the business services available for the customer and what processes they are realised by.
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -20,7 +22,7 @@ To order an insurance the customer is able to browse J.D.H. Insurance's website 
 \end{center}
 \subsubsection{The Process of Claim Registration}
 \label{sec:claim}
-To claim compensation, the customer are able to download a paper claim application from the website. The application, including customer information and claim description, is sent to J.D.H Insurance by mail which is received by a claim administrator which registers it in the Claim management system by hand. A Claim Evaluator evaluates the claim application and compensates the customer in case of valid claim. Either way the claim evaluator notifies the customer by sending a letter with his answer to the claim. \Fref{fig:archi_claim} displays the services available to the customer and the underlying process and systems. It also shows the processes which the evaluator and administrator executes and which systems they use.
+To claim compensation, the customer are able to download a paper claim application from the website. The application, including customer information and claim description, is sent to J.D.H Insurance by mail which is received by a claim administrator which registers it in the Claim management system by hand. A Claim Evaluator evaluates the claim application and compensates the customer in case of valid claim. Either way the claim evaluator notifies the customer by sending a letter with his answer to the claim. Figure 2 displays the services available to the customer and the underlying process. It also shows the processes which the evaluator and administrator executes.
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -37,7 +39,7 @@ To claim compensation, the customer are able to download a paper claim applicati
 J.D.H. Insurance provides various support services for their customers and possible customers, which includes support by phone or e-mail. Each support service are described in the following subsections.
 \paragraph{Phone Support}
 \label{sec:phone}
-The customer has the option to call in to J.D.H. Insurance for support. \Fref{fig:archi_phone} shows the process and it works like following: the customer makes a call, whereupon this call gets registered by the phone support system and then placed in a stack by the phone dispatcher. The call then gets handled by someone in the support team which will try to solve the problem over the phone. While trying to solve the problem at hand, the supporter is provided with a FAQ service that will help in the problem solving. The results of the solving process is either directly reported back to the customer over the phone or by an email. 
+The customer has the option to call in to J.D.H. Insurance for support. The process works like following: the customer makes a call, whereupon this call gets registered by the phone support system and then placed in a stack by the phone dispatcher. The call then gets handled by someone in the support team which will try to solve the problem over the phone. While trying to solve the problem at hand, the supporter is provided with a FAQ service that will help in the problem solving. The results of the solving process is directly reported back to the customer in the call.
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -51,7 +53,7 @@ The customer has the option to call in to J.D.H. Insurance for support. \Fref{fi
 %
 \paragraph{E-Mail Support}
 \label{sec:mail_support}
-The customer is able to send an e-mail to get support from J.D.H. Insurance's support team. The e-mail sent to the support team gets registered in the mail support system for help desk team to try solve. When the issue is handled the employee handling the issue sends an e-mail back to the customer including the results from the investigation. Figure 5 shows the services available to the customer and what processes the support team executes to enable e-mail support. This process is shown in \fref{fig:archi_mail}.
+The customer is able to send an e-mail to get support from J.D.H. Insurance’s support team. The e-mail sent to the support team gets registered in the mail support system for help desk team to try solve. When the issue is handled the employee handling the issue sends an e-mail back to the customer including the results from the investigation. Figure 5 shows the services available to the customer and what processes the support team executes to enable e-mail support.
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -105,7 +107,7 @@ Next we present the current values for some entities primarily considered when a
 
 \subsubsection{Claim Registration - Data Accuracy}
 \label{sec:claim_analysis}
-The claim registration service which J.D.H. Insurance provide to the customers they insure has a critical point where it is important that the accuracy of the claims application maintain, that is when the claim administrator receives the claim application from an insurant and registers it into the claim management system. For J.D.H. Insurance to ensure that no information is lost in this process it is vital to analyze the data accuracy of it to see if it can be improved by a new architecture providing higher accuracy. The analyze is done by using the following view, displayed in \fref{fig:map_claim_data}.
+The claim registration service which J.D.H. Insurance provide to the customers they insure has a critical point where it is important that the accuracy of the claims application maintain, that is when the claim administrator receives the claim application from an insurant and registers it into the claim management system. For J.D.H. Insurance to ensure that no information is lost in this process it is vital to analyze the data accuracy of it to see if it can be improved by a new architecture providing higher accuracy. The analyze is done by using the following view, displayed in figure 11.
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -116,14 +118,14 @@ The claim registration service which J.D.H. Insurance provide to the customers t
 		\label{fig:map_claim_data}
 	\end{figure}
 \end{center}
-The claim application is sent by the insurant to the company and the input accuracy of the application can be assumed to be very high, 0.99. The application is processed by the claim administrator in the claim registration process and the translation from the paper application to the digital description tend to create loss of information, the input accuracy of this is 0.80. The evaluator then reads this description and extends it with an answer, this extension has an input accuracy of 0.95.\\\\
+The claim application is sent by the insurant to the company and the input accuracy of the application can be assumed to be very high, 0.99. The application is processed by the claim administrator in the claim registration process and the translation from the paper application to the digital description tend to create loss of information, the deterioration of this process is 0.1. When the evaluator writes a result to the claim there is a small loss of information. The deterioration of this process is 0.03. \\\\ 
 %
-This results in a total accuracy loss of 0.81 which seems like a low value for a company evaluating information provided by their customers and which aim to provide the best insurances.
+This results in a accuracy after the claim registration process of 0.89, and after the evaluation process an accuracy of 0.85, which seems like a low value for a company evaluating information provided by their customers and which aim to provide competitive insurances. Table x shows the values and the resulting accuracies in the process.
 \input{tables/claim_as_is}
 %
 \subsubsection{Support - Service Availability}
 \label{sec:support_analysis}
-One of J.D.H. Insurance visions is to provide the best support for their customers. One important aspect of this support is the availability of the support. Clearly the access points for the support functions need to be available to the customers if they should be able to contact J.D.H. Insurance. An analysis of the availability of the access points of both the support architectures would then be of value for J.D.H. Insurance, and to evaluate what improvements that could be done to increase the availability of these services. The following view, \fref{fig:map_support_phone_availability}, shows the service of calling to the phone support and analyzes its availability to the customers.
+One of J.D.H. Insurance visions is to provide the good support for their customers. One important aspect of this support is the availability of the support. Clearly the access points for the support functions need to be available to the customers if they should be able to contact J.D.H. Insurance. An analysis of the availability of the access points of both the support architectures would then be of value for J.D.H. Insurance, and to evaluate what improvements that could be done to increase the availability of these services. The following view, figure 12, shows the service of calling to the phone support and analyzes its availability to the customers, and figure x displays the access point of mail support analyzed.
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -134,10 +136,7 @@ One of J.D.H. Insurance visions is to provide the best support for their custome
 		\label{fig:map_support_phone_availability}
 	\end{figure}
 \end{center}
-The Phone support system has an availability of 0.95. The Phone system dispatcher has an availability of 0.96. The infrastructure function Call management and the infrastructure service call provider has evidential availability of 0.95.\\\\
-%
-The result of the analysis of these values gives an availability of 0.91 for the service, which is a low value for a service which should be able to compete with other companies similar services.
-\\TODO TEXT ABOUT MAIL AVAILABILITY\\
+Table x contains the values for each availability of the systems in the phone support process. The result of the analysis of these values gives an availability of 0.85 for the Contact phone support service, which is a low value for a service which should be able to compete with other companies similar services.
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -150,8 +149,9 @@ The result of the analysis of these values gives an availability of 0.91 for the
 \end{center}
 
 \input{tables/support_as_is}
+Table x displays the availabilities of the systems in the mail support process. The analysis results in an availability of the Contact mail support service of 0.90, which seems quite low for both being a mail service and for being an important service to customers.\\\\
 %
-
+\emph{Note: We experienced problems with EAAT during this analysis. EAAT did not calculate a distinct value for the Register issue process. The availability has been calculated manually, using multiplication of the two availabilities of the application services Issue Registration Service and Mail Recognition.}
 %
 \subsection{Improvements}
 \label{sec:improvements}
