@@ -1,0 +1,79 @@
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{2.4cm}|l|l|p{7.5cm}|}
+		\hline
+		\textbf{} & \textbf{As-Is} & \textbf{To-Be} & \multicolumn{1}{c|}{\textbf{Gaps}} \\ \hline
+		\textbf{Business architecture} &  &  & \begin{itemize}\vspace{-0.5cm}
+		\item[$-$] Order manager
+		\item[$-$] Send Order Acceptance
+		\item[$+$] Present order completion
+		\item[$+$] Instant feedback through "Applying order"
+		\end{itemize}\vspace{-0.7cm} \\ \hline 
+
+		\textbf{Information architecture} &  &  & \begin{itemize}\vspace{-0.5cm}
+		\item[$-$] Customer order status
+		\item[$-$] Order management system
+		\item[$+$] Updated website including new application function
+		\end{itemize}\vspace{-0.7cm} \\ \hline
+
+		\textbf{Technology architecture} &  &  & \begin{itemize}\vspace{-0.5cm}
+		\item[$-$] Fetch order information
+		\item[$-$] Order data management
+		\item[$-$] Order management DB
+		\end{itemize}\vspace{-0.7cm} \\ \hline
+	\end{tabular}	
+	\caption{Order Process}
+	\label{table:gaps_order}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{2.4cm}|l|l|p{7.5cm}|}
+		\hline
+		\textbf{} & \textbf{As-Is} & \textbf{To-Be} & \multicolumn{1}{c|}{\textbf{Gaps}} \\ \hline
+		\textbf{Business architecture} &  &  & \begin{itemize} \vspace{-0.5cm}
+		\item[$-$] Claim administrator
+		\item[$-$] Claim Application Download
+		\item[$-$] Download Claim Form
+		\end{itemize} \vspace{-0.7cm}\\ \hline 
+
+		\textbf{Information architecture} &  & & \begin{itemize}\vspace{-0.5cm}
+		\item[$-$] Form downloading
+		\item[$-$] Form presentation
+		\item[$+$] Customer Claim portal
+		\item[$+$] Extendended website functionality
+		\end{itemize}\vspace{-0.7cm} \\ \hline
+
+		\textbf{Technology architecture} & - & - & \multicolumn{1}{c|}{\emph{No gaps}} \\ \hline
+	\end{tabular}	
+	\caption{Claim Process}
+	\label{table:gaps_claim}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{2.4cm}|l|l|p{7.5cm}|}
+		\hline
+		\textbf{} & \textbf{As-Is} & \textbf{To-Be} & \multicolumn{1}{c|}{\textbf{Gaps}} \\ \hline
+		\textbf{Business architecture} &  &  & \begin{itemize}\vspace{-0.5cm}
+		\item[$-$] Common support entry point "Support service"
+		\item[$\pm$] Helpdesk employee replaces mail \& phone supporter
+		\end{itemize}\vspace{-0.7cm} \\ \hline 
+
+		\textbf{Information architecture} &  &  & \begin{itemize}\vspace{-0.5cm}
+		\item[$-$] Phone support system
+		\item[$-$] Mail support system
+		\item[$-$] Mail recognition
+		\item[$+$] Helpdesk system including application functions
+		\item[$+$] Updated Mail Handler
+		\end{itemize}\vspace{-0.7cm} \\ \hline
+
+		\textbf{Technology architecture} &  &  & \begin{itemize}\vspace{-0.5cm}
+		\item[$-$] Phone support DB
+		\item[$-$] Mail support DB
+		\item[$+$] Helpdesk DB
+		\end{itemize}\vspace{-0.7cm} \\ \hline
+	\end{tabular}	
+	\caption{Support Process}
+	\label{table:gaps_support}
+\end{table}
