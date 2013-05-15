@@ -9,7 +9,7 @@ The models presented in this section considers the As-Is state of the enterprise
 %
 \subsubsection{The Ordering of an Insurance}
 \label{sec:order}
-To order an insurance the customer is able to browse J.D.H. Insurance's website for the insurance they would like to apply for. The customer is then able to download a paper application form and send it to J.D.H. Insurance by mail for the company's order managers to register the order and to send an order status response back to the customer before the order of an insurance is completed. \Fref{fig:map_order} shows the business services available for the customer and what processes they are realised by.
+To order an insurance the customer is able to browse J.D.H. Insurance's website for the insurance they would like to apply for. The customer is then able to download a paper application form and send it to J.D.H. Insurance by mail for the company's order managers to register. The order manager uses the Order management system's Order handling function to complete the registration and then uses the Customer order status function to assemble an order acceptance letter to be sent to the customer. \Fref{fig:map_order} shows the business services available for the customer and what processes they are realised by. The Order view in the mentioned iEaat file displays the full architecture of the Order process. 
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -22,7 +22,7 @@ To order an insurance the customer is able to browse J.D.H. Insurance's website 
 \end{center}
 \subsubsection{The Process of Claim Registration}
 \label{sec:claim}
-To claim compensation, the customer are able to download a paper claim application from the website. The application, including customer information and claim description, is sent to J.D.H Insurance by mail which is received by a claim administrator which registers it in the Claim management system by hand. A Claim Evaluator evaluates the claim application and compensates the customer in case of valid claim. Either way the claim evaluator notifies the customer by sending a letter with his answer to the claim. \Fref{fig:map_claim} displays the services available to the customer and the underlying process. It also shows the processes which the evaluator and administrator executes.
+To claim compensation, the customer are able to download a paper claim application from the website. The application, including customer information and claim description, is sent to J.D.H Insurance by mail which is received by a claim administrator which registers it in the Claim management system by hand. A Claim Evaluator uses the same system to evaluate the claim application by fetching the information of the claim and registering the result in the system. The evaluator then compensates the customer in case of valid claim using the Compensation handler in the Claim management system. Either way the claim evaluator notifies the customer by sending a letter with his answer to the claim assembled and printed by the system. \Fref{fig:map_claim} displays the services available to the customer and the underlying process. It also shows the processes which the evaluator and administrator executes. The Claim view in the mentioned iEaat file displays the full architecture.  
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -39,7 +39,7 @@ To claim compensation, the customer are able to download a paper claim applicati
 J.D.H. Insurance provides various support services for their customers and possible customers, which includes support by phone or e-mail. Each support service are described in the following subsections.
 \paragraph{Phone Support}
 \label{sec:phone}
-The customer has the option to call in to J.D.H. Insurance for support. The process is displayed in \fref{fig:map_phone} and works like following: the customer makes a call, whereupon this call gets registered by the phone support system and then placed in a stack by the phone dispatcher. The call then gets handled by someone in the support team which will try to solve the problem over the phone. While trying to solve the problem at hand, the supporter is provided with a FAQ service that will help in the problem solving. The results of the solving process is directly reported back to the customer in the call. 
+The customer has the option to call in to J.D.H. Insurance for support. The process is displayed in \fref{fig:map_phone} and works like following: the customer makes a call, whereupon this call gets registered by the phone support system and then placed in a stack by the phone dispatcher. The call then gets handled by someone in the support team which will try to solve the problem over the phone. While trying to solve the problem at hand, the supporter is provided with a FAQ service from the Phone support system that will help the problem solving. The results of the solving process is directly reported back to the customer during the call. Figure 4 shows the service available to customer and the processes executed by the phone supporter. The attach iEaat file JDHInsuranceASIS contains a view called Phone support which displays the full architecture of this process. 
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -53,7 +53,7 @@ The customer has the option to call in to J.D.H. Insurance for support. The proc
 %
 \paragraph{E-Mail Support}
 \label{sec:mail_support}
-The customer is able to send an e-mail to get support from J.D.H. Insurance's support team. The e-mail sent to the support team gets registered in the mail support system for help desk team to try solve. When the issue is handled the employee handling the issue sends an e-mail back to the customer including the results from the investigation. \Fref{fig:map_mail} shows the services available to the customer and what processes the support team executes to enable e-mail support.
+The customer is able to send an e-mail to get support from J.D.H. Insurance's support team. The e-mail sent to the support team gets registered in the Mail support system for a mail supporter to try solve. The mail supporter fetches information about the issue and registers a result to the issue by the Issue handler function of the Mail support system. When the issue is handled the employee handling the issue sends an e-mail back to the customer including the results from the investigation, using the same system. \Fref{fig:map_mail} shows the services available to the customer and what processes the support team executes to enable e-mail support. The Mail view in the mentioned iEaat file contains the full architecture of the process. 
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -72,7 +72,7 @@ This section contains analysis of segments of the As-Is MAP model, with respect 
 
 \subsubsection{Order Registration - Cost}
 \label{sec:order_analysis}
-The registration of order application and sending the order acceptance letter as response are two processes which uses several systems and a role in the company. The role is an Order manager registering and sending acceptance letters. The systems he uses are order management systems, the order management database and the customer relation database. All this systems and the role seems quite costly for such a simple process, and to reach the vision of the company a more cost efficient architecture of these processes would help J.D.H. Insurance to provide better services and insurances. This architecture is interesting to analyze since it would be possible to replace the manager with an automated system and improve the usage of the order management system. The following view, \fref{fig:map_order_cost}, shows the view analyzed for finding cost in the processes which includes the manager.
+The registration of order application and sending the order acceptance letter as response are two processes which uses several systems and a role in the company. The role is an Order manager registering and sending acceptance letters. The systems he uses are order management systems, the order management database and the customer relation database. All this systems and the role seems quite costly for such a simple process, and to reach the vision of the company a more cost efficient architecture of these processes would help J.D.H. Insurance to provide better services and insurances. This architecture is interesting to analyze since it would be possible to replace the manager with an automated system and improve the usage of the order management system. The following view, \fref{fig:map_order_cost}, shows the view analyzed for finding cost in the processes which includes the manager. 
 \begin{center}
 	\begin{figure}[H]
 		\centering
@@ -122,7 +122,7 @@ One of J.D.H. Insurance visions is to provide the good support for their custome
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.10]{images/map_phone_analysis_asis.png}}
+		\fbox{\includegraphics[scale = 0.14]{images/map_phone_analysis_asis.png}}
 		\caption{Service availability of the Phone support access service}
 		\label{fig:map_support_phone_availability}
 	\end{figure}
@@ -133,7 +133,7 @@ One of J.D.H. Insurance visions is to provide the good support for their custome
 		\centering
 		\setlength\fboxsep{7pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[scale = 0.09]{images/map_mail_analysis_asis.png}}
+		\fbox{\includegraphics[scale = 0.13]{images/map_mail_analysis_asis.png}}
 		\caption{Service availability of the Mail support service}
 		\label{fig:map_support_mail_availability}
 	\end{figure}

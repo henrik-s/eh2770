@@ -1,7 +1,14 @@
 \section{MAP Analysis Results}
 \label{sec:map_analysis_results}
+In this section the results from the calculations from As-Is anal
+\subsection{Order Process}
+Clearly the change in architecture and usage of systems has impacted the cost of the business processes supporting this service. \Fref{tab:order_cost_both} shows that the cost for the "Order Receivement process" is lowered from 1 525 000 to 373 500 and the cost for the "Send Order Acceptance" process is eliminated and transfered onto the "Present Order Completion" process, where the cost is lowered from 1 875 000 to 373 500. \Fref{tab:order_availability_both} also shows that these changes do not affect the \textsl{Service Availability} of the service "Applying Order".
 \input{tables/order_cost_both.tex}
 \input{tables/order_availability_both.tex}
+\subsection{Claim Process}
+As the Representation Set "Claim Application" in the To-Be scenario is eliminated and the \textsl{Deteroriation} is lowered from 0.10 to 0.01 in the business process "Claim Registration", the resulting change in \textsl{Accuracy} in the Representation Set "Notification Letter" is an increase from 0.84 to 0.92. See \fref{tab:claim_both} for a summarized overview.
 \input{tables/claim_both.tex}
+\subsection{Support Process}
+Two nodes is no longer in use in the To-Be scenario (Phone Support DB and Mail DB), the two systems Phone Support and Mail Support has been removed and replaced by the new system Helpdesk. The availability of the new systems is higher (0.99) than the two old systems (0.98 \& 0.98). Another change in the support process was introducing a new Role: Helpdesk employee with a higher availability (0.99) then the two, now obsolete, roles Phone- and Mail Supporter (0.97 \& 0.95). The result of these changes is increased availability in all the business services in this whole process. See \fref{tab:support_both} for a summarized overview.
 \input{tables/support_both.tex}
 
